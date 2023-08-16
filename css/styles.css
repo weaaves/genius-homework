@@ -37,7 +37,9 @@
 }
 
 /* Base */
-*, ::before, ::after {
+*,
+::before,
+::after {
     box-sizing: border-box;
 }
 
@@ -51,7 +53,13 @@ body {
     margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
     margin-top: 0;
 }
 
@@ -70,12 +78,12 @@ a {
 }
 
 .visually-hidden {
-    position:absolute;
-    left:-10000px;
-    top:auto;
-    width:1px;
-    height:1px;
-    overflow:hidden;
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
 
 .section {
@@ -156,6 +164,7 @@ a {
     text-align: center;
     margin-bottom: 0;
 }
+
 .hero-title .accent {
     color: var(--color-brand-normal);
 }
@@ -167,6 +176,7 @@ a {
     background-position: center top;
     background-size: cover;
 }
+
 /* Advantages section */
 .advantages-section {
     background-color: var(--color-brand-normal);
@@ -197,7 +207,7 @@ a {
     text-align: center;
 }
 
-.section-title .accent{
+.section-title .accent {
     color: var(--color-brand-dark);
 }
 
@@ -255,7 +265,8 @@ a {
     margin-bottom: 0;
 }
 
-.chefs-title::before, .chefs-title::after {
+.chefs-title::before,
+.chefs-title::after {
     position: absolute;
     background-color: var(--color-brand-light);
     width: 352px;
@@ -328,7 +339,8 @@ a {
     height: 444px;
     padding: 24px;
     border-radius: 16px;
-    border: 1px solid black; /* Remove */
+    border: 1px solid black;
+    /* Remove */
     background-image: linear-gradient(180deg, rgba(49, 38, 26, 0.00) 55.21%, rgba(49, 38, 26, 0.71) 72.92%, var(--color-primary-dark) 100%);
     transition: transform 0.3s;
 }
@@ -415,22 +427,26 @@ a {
     right: 0;
     background-image: url('../images/decor-bread-large.png');
 }
+
 .footer-container {
     display: flex;
     gap: 20px;
 }
 
-.footer-nav, .footer-address {
+.footer-nav,
+.footer-address {
     display: flex;
     flex-basis: 50%;
     gap: 20px;
 }
 
-.footer-logo, .footer-menu {
+.footer-logo,
+.footer-menu {
     flex-grow: 1;
 }
 
-.address-list, .address-info {
+.address-list,
+.address-info {
     flex-grow: 1;
 }
 
@@ -487,12 +503,73 @@ a {
     max-width: 880px;
     height: 100%;
     max-height: 880px;
-    background-color: var(--color-brand-light);
+    padding: 128px;
+    background-color: var(--color-primary-light);
     border-radius: 32px;
+    overflow-y: auto;
 }
 
 .modal-btn-close {
     position: absolute;
     top: 40px;
     right: 40px;
+}
+
+/* Form */
+
+.form-label {
+    position: absolute;
+    left: 42px;
+    top: 16px;
+    transform: translate(-36px, -40px);
+}
+
+.form-input {
+    padding: 16px 42px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.17;
+    border: 1px solid var(--color-secondary-dark);
+    border-radius: 8px;
+    background: transparent;
+}
+
+.form-input:focus {
+    border-color: var(--color-brand-normal);
+    outline: none;
+}
+
+.form-input::placeholder {
+    color: var(--color-secondary-dark);
+    font-size: 16px;
+    line-height: 1.17;
+}
+
+.form-input:focus::placeholder {
+    color: var(--color-primary-dark);
+}
+
+.form-field {
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.form-button {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 24px;
+}
+
+.form-terms {
+    margin: 0 auto;
+    max-width: 220px;
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: 500;
+    text-align: center;
+}
+
+.form-terms-link {
+    color: var(--color-primary-dark);
+    text-underline-offset: 2px;
 }
